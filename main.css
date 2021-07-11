@@ -1,4 +1,120 @@
-@media screen and (max-width: 600px) {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #ffffff;
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 100vh;
+  width: 100vw;
+}
+.sub-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Inconsolata;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.text-image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 10%;
+}
+
+.image-container {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+.text-container {
+  margin: 5%;
+}
+
+.main-message {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 71px;
+  letter-spacing: -0.035em;
+
+  /* Gray 1 */
+
+  color: #333333;
+}
+
+.sub-message {
+  width: 100%;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+}
+
+.back-button {
+  /* Gray 1 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333;
+  width: 216px;
+  height: 68px;
+  left: 24px;
+  top: 726px;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10%;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  margin-bottom: 1%;
+  text-align: center;
+  color: #bdbdbd;
+  margin-top: 20%;
+}
+@media (max-width: 600px) {
   .container {
     background: #ffffff;
     box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.1);
@@ -24,12 +140,18 @@
 
   .text-image-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10%;
   }
 
   .image-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image-container img {
     max-width: 100%;
-    height: auto;
   }
 
   .main-message {
@@ -84,7 +206,7 @@
   }
 
   .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     text-align: center;
     font-family: Montserrat;
@@ -93,121 +215,9 @@
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
-    margin-bottom: 1%;
+    margin-top: 10%;
     text-align: center;
 
     color: #bdbdbd;
   }
-}
-
-.container {
-  background: #ffffff;
-  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  height: 100vh;
-  width: 100vw;
-}
-.sub-container {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.header {
-  display: flex;
-  flex-wrap: wrap;
-  font-family: Inconsolata;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  letter-spacing: -0.08em;
-  text-transform: uppercase;
-  color: #333333;
-}
-
-.text-image-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10%;
-}
-
-.image-container {
-  display: flex;
-  align-items: flex-end;
-
-  align-content: flex-start;
-  justify-content: center;
-}
-
-.image-container img {
-  max-width: 100%;
-}
-
-.text-container {
-  margin: 5%;
-}
-
-.main-message {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  font-family: Space Mono;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 71px;
-  letter-spacing: -0.035em;
-
-  /* Gray 1 */
-
-  color: #333333;
-}
-
-.sub-message {
-  width: 100%;
-  font-family: Space Mono;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: -0.035em;
-  color: #4f4f4f;
-}
-
-.back-button {
-  /* Gray 1 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #333333;
-  width: 216px;
-  height: 68px;
-  left: 24px;
-  top: 726px;
-  font-family: Space Mono;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-  margin-top: 10%;
-  /* identical to box height */
-
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-
-  color: #ffffff;
-}
-
-.footer {
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  /* identical to box height */
-  margin-bottom: 1%;
-  text-align: center;
-
-  color: #bdbdbd;
 }
